@@ -6,7 +6,6 @@
 //
 
 import Foundation
-//DemoTableViewCell
 
 struct Section {
     var sectionTitle: String

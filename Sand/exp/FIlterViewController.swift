@@ -12,14 +12,14 @@ class FIlterViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var sections = [
-        Section(sectionTitle: "🦁 Animation",
-                    filters: ["The Lion King", "The Incredibles"],
+        Section(sectionTitle: "Сортировка по ...",
+                    filters: ["Рэйтингу","По дате"],
                     expanded: false),
-            Section(sectionTitle: "💥 Superhero",
-                    filters: ["Guardians of the Galaxy", "The Flash", "The Avengers", "The Dark Knight"],
+            Section(sectionTitle: "Жанры",
+                    filters: ["Детектив","Драма", "Вестерн"],
                     expanded: false),
-            Section(sectionTitle: "👻 Horror",
-                    filters: ["The Walking Dead", "Insidious", "Conjuring"],
+            Section(sectionTitle: "Страны",
+                    filters: ["Казахстан","Франция","США"],
                     expanded: false)
         ]
     
@@ -86,13 +86,9 @@ extension FIlterViewController: UITableViewDelegate, UITableViewDataSource, Expa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectIndexPath = indexPath
-//        self.sections[indexPath.section].
         sections[indexPath.section].expanded = !sections[indexPath.section].expanded
         tableView.beginUpdates()
         tableView.reloadSections([indexPath.section], with: .automatic)
         tableView.endUpdates()
     }
-    
-
-    
 }

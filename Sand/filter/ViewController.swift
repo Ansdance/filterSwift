@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     var seasons = [Season(sectionTitle: "Сортировка по ...", filters: ["Рэйтингу","По дате"], expanded: false),
                    Season(sectionTitle: "Жанры", filters: ["Детектив","Драма", "Вестерн"], expanded: false),
-                   Season(sectionTitle: "Страны", filters: ["Казахстан","Франция","США "], expanded: false)
+                   Season(sectionTitle: "Страны", filters: ["Казахстан","Франция","США"], expanded: false)
     ]
     
     override func viewDidLoad() {
