@@ -11,11 +11,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var seasons = [["Рэйтингу","По дате"], ["Детектив","Драма", "Вестерн"], ["Казахстан","Франция","США "]]
+    var seasons = [Season(sectionTitle: "Сортировка по ...", filters: ["Рэйтингу","По дате"], expanded: false),
+                   Season(sectionTitle: "Жанры", filters: ["Детектив","Драма", "Вестерн"], expanded: false),
+                   Season(sectionTitle: "Страны", filters: ["Казахстан","Франция","США "], expanded: false)
+    ]
+//    var seasons = [["Рэйтингу","По дате"], ["Детектив","Драма", "Вестерн"], ["Казахстан","Франция","США "]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let nib = UINib(nibName: "DemoTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "DemoTableViewCell")
@@ -44,15 +47,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return seasons[section].count
+        if seasons[section].expanded == true {
+            return seasons[section].filters.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DemoTableViewCell", for: indexPath) as! DemoTableViewCell
-//        cell.firstImageView.backgroundColor = .red
-//        
-        cell.textLabel?.text = seasons[indexPath.section][indexPath.row]
+
+        cell.textLabel?.text = seasons[indexPath.section].filters[indexPath.row]
 //        cell.button.setTitle(seasons[indexPath.section][indexPath.row], for: .normal)
 //        cell.transform = CGAffineTransform(scaleX: -1, y: -1)
 //        cell.button.transform = CGAffineTransform(scaleX: -1, y: -1)
@@ -60,42 +66,33 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let myLabel = UILabel()
         
-        myLabel.backgroundColor = .orange
-        myLabel.font = UIFont.systemFont(ofSize: 20)
+        let sectionHeaderButton = UIButton()
+        sectionHeaderButton.backgroundColor = .orange
+        sectionHeaderButton.titleLabel!.font = UIFont.systemFont(ofSize: 20)
+        sectionHeaderButton.titleLabel!.textAlignment = .left
+        sectionHeaderButton.tag = section
         
-        switch section {
-        case 0:
-            myLabel.text = "Сортировка по ..."
-        case 1:
-            myLabel.text = "Жанры"
-        case 2:
-            myLabel.text = "Страны"
-        case 3:
-            myLabel.text = "Fall"
-        default:
-            return nil
-        }
-
-        return myLabel
+        sectionHeaderButton.addTarget(self, action: #selector(self.sectionMarkerToggle(sender:)), for: .touchUpInside)
+        sectionHeaderButton.setTitle(seasons[section].sectionTitle, for: .normal)
+        
+        return sectionHeaderButton
+    }
+    
+    @objc func sectionMarkerToggle(sender: UIButton) {
+        let sectionIndex = sender.tag
+        seasons[sectionIndex].expanded.toggle()
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if section == 0 {
-//            return "Сортировка по ..."
-//        } else if section == 1 {
-//            return "Жанры"
-//        } else if section == 2 {
-//            return "Страны"
-//        } else {
-//            return "Fall"
-//        }
-//    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
+
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 ////        return tableView.frame.width / CGFloat(seasons.count)
 //        return 60

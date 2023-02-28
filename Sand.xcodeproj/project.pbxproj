@@ -20,6 +20,7 @@
 		801EBB7829AD25430096EC26 /* SerialOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EBB7729AD25430096EC26 /* SerialOverviewViewController.swift */; };
 		80A4553B29ADEBC200A27326 /* DemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A4553929ADEBC200A27326 /* DemoTableViewCell.swift */; };
 		80A4553C29ADEBC200A27326 /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A4553A29ADEBC200A27326 /* DemoTableViewCell.xib */; };
+		80B8028029AE1B69001F9C94 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8027F29AE1B69001F9C94 /* Season.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		801EBB7729AD25430096EC26 /* SerialOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialOverviewViewController.swift; sourceTree = "<group>"; };
 		80A4553929ADEBC200A27326 /* DemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewCell.swift; sourceTree = "<group>"; };
 		80A4553A29ADEBC200A27326 /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
+		80B8027F29AE1B69001F9C94 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				80A4553929ADEBC200A27326 /* DemoTableViewCell.swift */,
 				80A4553A29ADEBC200A27326 /* DemoTableViewCell.xib */,
 				801EBB7529AD23720096EC26 /* ViewController.swift */,
+				80B8027F29AE1B69001F9C94 /* Season.swift */,
 			);
 			path = filter;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				801EBB7429AD229E0096EC26 /* TableViewController.swift in Sources */,
 				801EBB7829AD25430096EC26 /* SerialOverviewViewController.swift in Sources */,
 				801EBB7629AD23720096EC26 /* ViewController.swift in Sources */,
+				80B8028029AE1B69001F9C94 /* Season.swift in Sources */,
 				801EBB4629AD22680096EC26 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
