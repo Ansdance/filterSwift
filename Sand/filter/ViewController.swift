@@ -59,17 +59,43 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "Сортировка по ..."
-        } else if section == 1 {
-            return "Жанры"
-        } else if section == 2 {
-            return "Страны"
-        } else {
-            return "Fall"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let myLabel = UILabel()
+        
+        myLabel.backgroundColor = .orange
+        myLabel.font = UIFont.systemFont(ofSize: 20)
+        
+        switch section {
+        case 0:
+            myLabel.text = "Сортировка по ..."
+        case 1:
+            myLabel.text = "Жанры"
+        case 2:
+            myLabel.text = "Страны"
+        case 3:
+            myLabel.text = "Fall"
+        default:
+            return nil
         }
+
+        return myLabel
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if section == 0 {
+//            return "Сортировка по ..."
+//        } else if section == 1 {
+//            return "Жанры"
+//        } else if section == 2 {
+//            return "Страны"
+//        } else {
+//            return "Fall"
+//        }
+//    }
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 ////        return tableView.frame.width / CGFloat(seasons.count)
 //        return 60
