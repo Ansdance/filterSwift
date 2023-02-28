@@ -7,6 +7,7 @@
 
 import Foundation
 
+// expandable sections Data Model // Data Structure
 struct Season {
     var sectionTitle: String
     var filters: [String]

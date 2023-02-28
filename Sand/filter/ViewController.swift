@@ -15,7 +15,6 @@ class ViewController: UIViewController {
                    Season(sectionTitle: "Жанры", filters: ["Детектив","Драма", "Вестерн"], expanded: false),
                    Season(sectionTitle: "Страны", filters: ["Казахстан","Франция","США "], expanded: false)
     ]
-//    var seasons = [["Рэйтингу","По дате"], ["Детектив","Драма", "Вестерн"], ["Казахстан","Франция","США "]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +23,7 @@ class ViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "DemoTableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
-        
-//        tableView.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
-
-//        tableView.showsVerticalScrollIndicator = false
-//        tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 100)
-//        tableView.contentInset = UIEdgeInsets(top: UIScreen.main.bounds.height, left: 0, bottom: 0, right: 0)
-        
     }
-    
-//    override func viewWillLayoutSubviews() {
-//        super.viewWillLayoutSubviews()
-//        tableView.frame = view.bounds
-//    }
-//
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -57,13 +42,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DemoTableViewCell", for: indexPath) as! DemoTableViewCell
-
         cell.textLabel?.text = seasons[indexPath.section].filters[indexPath.row]
-//        cell.button.setTitle(seasons[indexPath.section][indexPath.row], for: .normal)
-//        cell.transform = CGAffineTransform(scaleX: -1, y: -1)
-//        cell.button.transform = CGAffineTransform(scaleX: -1, y: -1)
         return cell
     }
+    
+    //button appearance
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -79,22 +66,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return sectionHeaderButton
     }
     
+    //change marker of section
     @objc func sectionMarkerToggle(sender: UIButton) {
         let sectionIndex = sender.tag
         seasons[sectionIndex].expanded.toggle()
         tableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
-    }
+
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50
     }
-
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-////        return tableView.frame.width / CGFloat(seasons.count)
-//        return 60
-//    }
 }
