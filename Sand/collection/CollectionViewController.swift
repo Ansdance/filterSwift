@@ -16,17 +16,10 @@ class CollectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
         
         collectionView.dataSource = self
         collectionView.delegate = self
-//        collectionView.register(UINib(nibName: "ColCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ColCollectionViewCell")
     }
-    
-    
-    
-    
-    
 }
 
 extension CollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
