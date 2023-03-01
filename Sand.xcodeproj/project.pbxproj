@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800F6BF929AF98D7002ED7C3 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800F6BF829AF98D7002ED7C3 /* CollectionViewController.swift */; };
+		800F6BFB29AF98FF002ED7C3 /* ColCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800F6BFA29AF98FF002ED7C3 /* ColCollectionViewCell.swift */; };
 		801EBB4429AD22680096EC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EBB4329AD22680096EC26 /* AppDelegate.swift */; };
 		801EBB4629AD22680096EC26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EBB4529AD22680096EC26 /* SceneDelegate.swift */; };
 		801EBB4B29AD22680096EC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801EBB4929AD22680096EC26 /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		800F6BF829AF98D7002ED7C3 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		800F6BFA29AF98FF002ED7C3 /* ColCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColCollectionViewCell.swift; sourceTree = "<group>"; };
 		801EBB4029AD22680096EC26 /* Sand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		801EBB4329AD22680096EC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		801EBB4529AD22680096EC26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		800F6BF729AF98BD002ED7C3 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				800F6BF829AF98D7002ED7C3 /* CollectionViewController.swift */,
+				800F6BFA29AF98FF002ED7C3 /* ColCollectionViewCell.swift */,
+			);
+			path = collection;
+			sourceTree = "<group>";
+		};
 		801EBB3729AD22680096EC26 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 		801EBB4229AD22680096EC26 /* Sand */ = {
 			isa = PBXGroup;
 			children = (
+				800F6BF729AF98BD002ED7C3 /* collection */,
 				8031015229AF458900A6509F /* scrollButtons */,
 				80B8028329AE41DE001F9C94 /* exp */,
 				80A4553E29AE01A200A27326 /* filter */,
@@ -332,6 +346,7 @@
 				8031015629AF45D100A6509F /* FilterScrollVIew.swift in Sources */,
 				80A4553B29ADEBC200A27326 /* DemoTableViewCell.swift in Sources */,
 				801EBB4429AD22680096EC26 /* AppDelegate.swift in Sources */,
+				800F6BF929AF98D7002ED7C3 /* CollectionViewController.swift in Sources */,
 				8031015829AF4B8D00A6509F /* ScrollSeasonView.swift in Sources */,
 				801EBB7429AD229E0096EC26 /* TableViewController.swift in Sources */,
 				801EBB7829AD25430096EC26 /* SerialOverviewViewController.swift in Sources */,
@@ -341,6 +356,7 @@
 				80B8028229AE41D6001F9C94 /* ExpandableHeaderView.swift in Sources */,
 				80B8028029AE1B69001F9C94 /* Season.swift in Sources */,
 				801EBB4629AD22680096EC26 /* SceneDelegate.swift in Sources */,
+				800F6BFB29AF98FF002ED7C3 /* ColCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
