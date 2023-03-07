@@ -41,6 +41,7 @@
 		80B8028529AE41F7001F9C94 /* ExpandableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B8028429AE41F7001F9C94 /* ExpandableHeaderView.xib */; };
 		80B8028729AE4223001F9C94 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8028629AE4223001F9C94 /* Section.swift */; };
 		80B8028929AE4B12001F9C94 /* FIlterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8028829AE4B12001F9C94 /* FIlterViewController.swift */; };
+		80C809AD29B715FA00EE6F98 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C809AC29B715FA00EE6F98 /* SegmentedViewController.swift */; };
 		80F666DB29B1BDD00079AA80 /* SerialOverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F666DA29B1BDD00079AA80 /* SerialOverviewTableViewController.swift */; };
 		80F666DD29B1BFE10079AA80 /* sdasdTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F666DC29B1BFE10079AA80 /* sdasdTableViewController.swift */; };
 		80F666DF29B1C18F0079AA80 /* SViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F666DE29B1C18F0079AA80 /* SViewController.swift */; };
@@ -103,6 +104,7 @@
 		80B8028429AE41F7001F9C94 /* ExpandableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandableHeaderView.xib; sourceTree = "<group>"; };
 		80B8028629AE4223001F9C94 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		80B8028829AE4B12001F9C94 /* FIlterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIlterViewController.swift; sourceTree = "<group>"; };
+		80C809AC29B715FA00EE6F98 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
 		80F666DA29B1BDD00079AA80 /* SerialOverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialOverviewTableViewController.swift; sourceTree = "<group>"; };
 		80F666DC29B1BFE10079AA80 /* sdasdTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sdasdTableViewController.swift; sourceTree = "<group>"; };
 		80F666DE29B1C18F0079AA80 /* SViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		801EBB4229AD22680096EC26 /* Sand */ = {
 			isa = PBXGroup;
 			children = (
+				80C809AB29B715E100EE6F98 /* SegmentedControl */,
 				80F6671C29B1C26A0079AA80 /* table serial for shqnyraq */,
 				80F666D929B1BDAE0079AA80 /* NewTable */,
 				806642A929B0F049007E8B68 /* TableVIew */,
@@ -266,6 +269,14 @@
 				80B8028829AE4B12001F9C94 /* FIlterViewController.swift */,
 			);
 			path = exp;
+			sourceTree = "<group>";
+		};
+		80C809AB29B715E100EE6F98 /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				80C809AC29B715FA00EE6F98 /* SegmentedViewController.swift */,
+			);
+			path = SegmentedControl;
 			sourceTree = "<group>";
 		};
 		80F666D929B1BDAE0079AA80 /* NewTable */ = {
@@ -449,6 +460,7 @@
 				800F6BFB29AF98FF002ED7C3 /* ColCollectionViewCell.swift in Sources */,
 				800F6BFD29B06D5C002ED7C3 /* FilterUIStackViewController.swift in Sources */,
 				806642AD29B0F0A7007E8B68 /* SerialViewController.swift in Sources */,
+				80C809AD29B715FA00EE6F98 /* SegmentedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

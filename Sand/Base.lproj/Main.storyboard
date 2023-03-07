@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tkk-3L-uWi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mk7-u0-n7L">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -321,6 +321,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Am-5z-l1Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1826.1538461538462" y="-775.59241706161129"/>
+        </scene>
+        <!--Segmented View Controller-->
+        <scene sceneID="BSr-Mf-jNH">
+            <objects>
+                <viewController storyboardIdentifier="SegmentedViewController" id="Mk7-u0-n7L" customClass="SegmentedViewController" customModule="Sand" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lhv-x2-QTd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jwA-8w-2vU">
+                                <rect key="frame" x="102" y="249" width="131" height="31"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="did:" destination="Mk7-u0-n7L" eventType="valueChanged" id="nfS-zm-LQl"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BF2-Yv-gvt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jwA-8w-2vU" firstAttribute="top" secondItem="BF2-Yv-gvt" secondAttribute="top" constant="202" id="7nr-9r-4y2"/>
+                            <constraint firstItem="jwA-8w-2vU" firstAttribute="leading" secondItem="BF2-Yv-gvt" secondAttribute="leading" constant="102" id="J9H-40-C2A"/>
+                            <constraint firstItem="BF2-Yv-gvt" firstAttribute="bottom" secondItem="jwA-8w-2vU" secondAttribute="bottom" constant="531" id="Phg-5P-393"/>
+                            <constraint firstItem="BF2-Yv-gvt" firstAttribute="trailing" secondItem="jwA-8w-2vU" secondAttribute="trailing" constant="157" id="VGg-nB-BqF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEH-o8-WHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2735" y="-761"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wUM-o3-fPf">
